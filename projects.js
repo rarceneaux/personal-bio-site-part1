@@ -34,22 +34,22 @@ let projects = [
   }
 
     const createProjectCards = ()=> {
+    doneString = '';  
     DoneProjects = projects.filter(donePro => donePro.available === true);  
-    // console.log(DoneProjects);
     DoneProjects.forEach((project) => {
-    DoneProjects += `<div class="project-card" style="width: 25rem;">`;
-    DoneProjects += `<img src="${project.screenshot}" class="card-img-top" alt="project-cards">`;
-    DoneProjects += `<div class="card-body">`;
-    DoneProjects += `<h5 class="card-title text-center">${project.title}</h5>`;
-    DoneProjects += `<p class="card-text text-center">${project.description}.</p>`;
-    DoneProjects += `<p class="card-text text-center">${project.technologiesUsed}.</p>`;
-    DoneProjects += `<div class='links'>`
-    DoneProjects += `<a href="">${project.url}</a>`;
-    DoneProjects += `<a href="">${project.githubUrl}</a>`;
-    DoneProjects += `</div>`
-    DoneProjects += `</div>`;
-    DoneProjects += `</div>`;    
-  printToDom(DoneProjects,'projectsPage');
+    doneString += `<div class="project-card" style="width: 25rem;">`;
+    doneString += `<img src="${project.screenshot}" class="card-img-top" alt="project-cards">`;
+    doneString += `<div class="card-body">`;
+    doneString += `<h5 class="card-title text-center">${project.title}</h5>`;
+    doneString += `<p class="card-text text-center">${project.description}.</p>`;
+    doneString += `<p class="card-text text-center">${project.technologiesUsed}.</p>`;
+    doneString += `<div class='links'>`
+    doneString += `<a href="">${project.url}</a>`;
+    doneString += `<a href="">${project.githubUrl}</a>`;
+    doneString += `</div>`
+    doneString += `</div>`;
+    doneString += `</div>`;   
+  printToDom(doneString,'projectsPage');
   });
 }
 
