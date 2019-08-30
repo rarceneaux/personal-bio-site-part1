@@ -34,10 +34,21 @@ let projects = [
   }
 
   const createProjectCards = ()=> {
-
-    let projectsString = ``;
-    projects.forEach
+    let projectsString = '';
+    projects.forEach((project) => {
+    projectsString += `<div class="project-card" style="width: 25rem;">`;
+    projectsString += `<img src="${project.screenshot}" class="card-img-top" alt="project-cards">`;
+    projectsString += `<div class="card-body">`;
+    projectsString += `<h5 class="card-title text-center">${project.title}</h5>`;
+    projectsString += `<p class="card-text text-center">${project.description}.</p>`;
+    projectsString += `<p class="card-text text-center">${project.technologiesUsed}.</p>`;
+    projectsString += `<div class='links'>`
+    projectsString += `<a href="">${project.url}</a>`;
+    projectsString += `<a href="">${project.githubUrl}</a>`;
+    projectsString += `</div>`
+    projectsString += `</div>`;
+    projectsString += `</div>`;    
   printToDom(projectsString,'projectsPage');
-  }
+  });
+}
 createProjectCards();
-
