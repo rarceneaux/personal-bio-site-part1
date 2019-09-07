@@ -9,13 +9,13 @@ let projects = [
     githubUrl: "https://rarceneaux.github.io/product-cards/"
   },
   {
-    title: "Cool Project", 
-    screenshot: "http://gotoflashgames.com/files/file/033.jpg", 
-    description: "This is the best project", // A good project description includes 'the what', 'the why', and 'the how'.
-    technologiesUsed: "HTML, CSS, Vanilla JavaScript, Version Control with Github",
-    available: false,
-    url: "https://github.com/nss-evening-cohort-8/js-part-deux", // Towards the latter part of the class, you will learn how to host your projects and people will be able to view them live. Cool, right? Welp, until then, just use your GitHub link in this spot as well.
-    githubUrl: "https://github.com/nss-evening-cohort-8/js-part-deux"
+    title: "Pet Adoption", 
+    screenshot: "images/PetAdoption.png", 
+    description: "This project is a simple example of event listeners on the pet buttons. The functionality of this project is the ability to filter the pets array down to the selected pet on the click event.", // A good projectject description includes 'the what', 'the why', and 'the how'.
+    technologiesUsed: "HTML, CSS, Flexbox, Version Control with Github",
+    available: true,
+    url: "https://rarceneaux.github.io/pet-adoption/", // Towards the latter part of the class, you will learn how to host your projects and people will be able to view them live. Cool, right? Welp, until then, just use your GitHub link in this spot as well.
+    githubUrl: "https://rarceneaux.github.io/pet-adoption/"
   },
   {
     title: "Cool Project", 
@@ -30,8 +30,20 @@ let projects = [
 
   const printToDom = (stringToPrint,divId) => {
     const selectedDiv = document.getElementById(divId);
-    selectedDiv.innerHTML += stringToPrint;
+    selectedDiv.innerHTML = stringToPrint;
   }
+
+    const printBio = () => {
+      bioString = `<h1> NO CONTENT YET BIO</h1>`;
+    printToDom(bioString,'bioPage');
+    };
+    printBio();
+
+    const printTech = () => {
+      techString = `<h1> NO CONTENT YET TECH</h1>`;
+    printToDom(techString,'technologiesPage');
+    };
+    
 
     const createProjectCards = ()=> {
     doneString = '';  
@@ -44,19 +56,45 @@ let projects = [
     doneString += `<p class="card-text text-center">${project.description}.</p>`;
     doneString += `<p class="card-text text-center">${project.technologiesUsed}.</p>`;
     doneString += `<div class='links'>`
-    doneString += `<a href="">${project.url}</a>`;
-    doneString += `<a href="">${project.githubUrl}</a>`;
+    doneString += `<a class='rlinks' href="">${project.url}</a>`;
+    doneString += `<a class='rlinks' href="">${project.githubUrl}</a>`;
     doneString += `</div>`
     doneString += `</div>`;
     doneString += `</div>`;   
   printToDom(doneString,'projectsPage');
   });
+};
+
+
+
+const projectsBtnEvent = (e) => {
+  $("#navToProjects").on('click', (e) => {
+    createProjectCards();
+    $("#projectsPage").show();
+    $("#bioPage").hide();
+    $("#technologiesPage").hide();
+  });
 }
+projectsBtnEvent();
 
-createProjectCards();
+const BioBtnEvent = (e) => {
+  $("#navToBio").on('click', (e) => {
+    $("#bioPage").show();
+    $("#projectsPage").hide();
+    $("#technologiesPage").hide();
+  })
+}
+BioBtnEvent();
+
+const TechBtnEvent = (e) => {
+  $("#navToTechnologies").on('click', (e) => {
+    printTech();
+    $("#technologiesPage").show();
+    $("#bioPage").hide();
+    $("#projectsPage").hide();
+    })
+}
+TechBtnEvent();
 
 
-// const startApp = () => {
-//   CreateProjectCards();
-// };
-// startApp();
+
