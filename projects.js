@@ -80,7 +80,7 @@ let projects = [
 };
 
 
-
+// Jquery 
 // const projectsBtnEvent = (e) => {
 //   $("#navToProjects").on('click', (e) => {
 //     createProjectCards();
@@ -114,16 +114,19 @@ let projects = [
 const linkEvents = (e) => {
   const linkClicked = e.target.id;
   if(linkClicked === 'navToBio'){
+    event.preventDefault();
     bio.style.display ='flex';
     tech.style.display = 'none';
-    pro.style.display = 'none';
+    pro.style.display = 'none'
   } else if (linkClicked === 'navToTechnologies') {
+    event.preventDefault();
     bio.style.display = 'none';
     pro.style.display = 'none';
     tech.style.display ='flex';
     printTech();
   } else {
     (linkClicked === 'navToProjects');
+    event.preventDefault();
     tech.style.display = 'none';
     bio.style.display =  'none';
     pro.style.display ='flex';
@@ -131,14 +134,12 @@ const linkEvents = (e) => {
   }
 }
 
-// linkEvents();
+
+// Event Listener
+const myLinks = document.getElementById('navLinks');
+myLinks.addEventListener('click',linkEvents);
 
 
 
 
 
-
-
-document.getElementById('navToBio').addEventListener('click',linkEvents);
-document.getElementById('navToTechnologies').addEventListener('click',linkEvents);
-document.getElementById('navToProjects').addEventListener('click',linkEvents);
