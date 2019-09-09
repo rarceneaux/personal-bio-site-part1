@@ -1,3 +1,8 @@
+const bio = document.getElementById('bioPage');
+const tech = document.getElementById('technologiesPage');
+const pro = document.getElementById('projectsPage');
+
+
 let projects = [
   {
     title: "Product Cards", 
@@ -27,6 +32,15 @@ let projects = [
     githubUrl: "https://github.com/nss-evening-cohort-8/js-part-deux"
   }];
 
+  // {
+  //   title: "", 
+  //   screenshot: "", 
+  //   description: "", // A good projectject description includes 'the what', 'the why', and 'the how'.
+  //   technologiesUsed: "",
+  //   available: true,
+  //   url: "", // Towards the latter part of the class, you will learn how to host your projects and people will be able to view them live. Cool, right? Welp, until then, just use your GitHub link in this spot as well.
+  //   githubUrl: ""
+  // }
 
   const printToDom = (stringToPrint,divId) => {
     const selectedDiv = document.getElementById(divId);
@@ -44,7 +58,7 @@ let projects = [
     printToDom(techString,'technologiesPage');
     };
     
-
+// event listener to call createProject cards
     const createProjectCards = ()=> {
     doneString = '';  
     DoneProjects = projects.filter(donePro => donePro.available === true);  
@@ -67,34 +81,64 @@ let projects = [
 
 
 
-const projectsBtnEvent = (e) => {
-  $("#navToProjects").on('click', (e) => {
-    createProjectCards();
-    $("#projectsPage").show();
-    $("#bioPage").hide();
-    $("#technologiesPage").hide();
-  });
-}
-projectsBtnEvent();
+// const projectsBtnEvent = (e) => {
+//   $("#navToProjects").on('click', (e) => {
+//     createProjectCards();
+//     $("#projectsPage").show();
+//     $("#bioPage").hide();
+//     $("#technologiesPage").hide();
+//   });
+// }
+// projectsBtnEvent();
 
-const BioBtnEvent = (e) => {
-  $("#navToBio").on('click', (e) => {
-    $("#bioPage").show();
-    $("#projectsPage").hide();
-    $("#technologiesPage").hide();
-  })
-}
-BioBtnEvent();
+// const BioBtnEvent = (e) => {
+//   $("#navToBio").on('click', (e) => {
+//     $("#bioPage").show();
+//     $("#projectsPage").hide();
+//     $("#technologiesPage").hide();
+//   })
+// }
+// BioBtnEvent();
 
-const TechBtnEvent = (e) => {
-  $("#navToTechnologies").on('click', (e) => {
+// const TechBtnEvent = (e) => {
+//   $("#navToTechnologies").on('click', (e) => {
+//     printTech();
+//     $("#technologiesPage").show();
+//     $("#bioPage").hide();
+//     $("#projectsPage").hide();
+//     })
+// }
+// TechBtnEvent();
+
+
+const linkEvents = (e) => {
+  const linkClicked = e.target.id;
+  if(linkClicked === 'navToBio'){
+    bio.style.display ='flex';
+    tech.style.display = 'none';
+    pro.style.display = 'none';
+  } else if (linkClicked === 'navToTechnologies') {
+    bio.style.display = 'none';
+    pro.style.display = 'none';
+    tech.style.display ='flex';
     printTech();
-    $("#technologiesPage").show();
-    $("#bioPage").hide();
-    $("#projectsPage").hide();
-    })
+  } else {
+    (linkClicked === 'navToProjects');
+    tech.style.display = 'none';
+    bio.style.display =  'none';
+    pro.style.display ='flex';
+    createProjectCards();
+  }
 }
-TechBtnEvent();
+
+// linkEvents();
 
 
 
+
+
+
+
+document.getElementById('navToBio').addEventListener('click',linkEvents);
+document.getElementById('navToTechnologies').addEventListener('click',linkEvents);
+document.getElementById('navToProjects').addEventListener('click',linkEvents);
