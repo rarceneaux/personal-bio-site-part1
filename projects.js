@@ -80,66 +80,28 @@ let projects = [
 };
 
 
-// Jquery 
-// const projectsBtnEvent = (e) => {
-//   $("#navToProjects").on('click', (e) => {
-//     createProjectCards();
-//     $("#projectsPage").show();
-//     $("#bioPage").hide();
-//     $("#technologiesPage").hide();
-//   });
-// }
-// projectsBtnEvent();
-
-// const BioBtnEvent = (e) => {
-//   $("#navToBio").on('click', (e) => {
-//     $("#bioPage").show();
-//     $("#projectsPage").hide();
-//     $("#technologiesPage").hide();
-//   })
-// }
-// BioBtnEvent();
-
-// const TechBtnEvent = (e) => {
-//   $("#navToTechnologies").on('click', (e) => {
-//     printTech();
-//     $("#technologiesPage").show();
-//     $("#bioPage").hide();
-//     $("#projectsPage").hide();
-//     })
-// }
-// TechBtnEvent();
-
 
 const linkEvents = (e) => {
+  e.preventDefault();
   const linkClicked = e.target.id;
   if(linkClicked === 'navToBio'){
-    event.preventDefault();
-    bio.style.display ='flex';
-    tech.style.display = 'none';
-    pro.style.display = 'none'
+    bio.classList.remove('hidden');
+    tech.classList.add('hidden');
+    pro.classList.add('hidden');
   } else if (linkClicked === 'navToTechnologies') {
-    event.preventDefault();
-    bio.style.display = 'none';
-    pro.style.display = 'none';
-    tech.style.display ='flex';
+    bio.classList.add('hidden');
+    pro.classList.add('hidden');
+    tech.classList.remove('hidden');
     printTech();
   } else {
     (linkClicked === 'navToProjects');
-    event.preventDefault();
-    tech.style.display = 'none';
-    bio.style.display =  'none';
-    pro.style.display ='flex';
+    tech.classList.add('hidden');
+    bio.classList.add('hidden');
+    pro.classList.remove('hidden');
     createProjectCards();
   }
-}
+} 
 
-
-// Event Listener
 const myLinks = document.getElementById('navLinks');
 myLinks.addEventListener('click',linkEvents);
-
-
-
-
 

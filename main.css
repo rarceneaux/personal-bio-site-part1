@@ -13,9 +13,6 @@ flex-direction: column;
 }
 
 #projectsPage{
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
   flex-wrap: wrap;
   }
 
@@ -57,8 +54,18 @@ nav {
   margin:15px
 }
 
-#bioPage,#technologiesPage{
+/* #bioPage,#technologiesPage{
   display: flex;
   justify-content: center;
   align-items: center;
+} */
+
+ .fullPage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden{
+  display: none;
 }
