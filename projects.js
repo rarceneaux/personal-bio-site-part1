@@ -32,15 +32,7 @@ let projects = [
     githubUrl: "https://github.com/nss-evening-cohort-8/js-part-deux"
   }];
 
-  // {
-  //   title: "", 
-  //   screenshot: "", 
-  //   description: "", // A good projectject description includes 'the what', 'the why', and 'the how'.
-  //   technologiesUsed: "",
-  //   available: true,
-  //   url: "", // Towards the latter part of the class, you will learn how to host your projects and people will be able to view them live. Cool, right? Welp, until then, just use your GitHub link in this spot as well.
-  //   githubUrl: ""
-  // }
+
 
   const printToDom = (stringToPrint,divId) => {
     const selectedDiv = document.getElementById(divId);
@@ -63,7 +55,7 @@ let projects = [
     doneString = '';  
     DoneProjects = projects.filter(donePro => donePro.available === true);  
     DoneProjects.forEach((project) => {
-    doneString += `<div class="project-card" style="width: 25rem;">`;
+    doneString += `<div class="project-card" style="width: 20rem;">`;
     doneString += `<img src="${project.screenshot}" class="card-img-top" alt="project-cards">`;
     doneString += `<div class="card-body">`;
     doneString += `<h5 class="card-title text-center">${project.title}</h5>`;

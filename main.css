@@ -1,4 +1,4 @@
-html, body {
+/* html, body {
   height: 100%;
 }
 
@@ -10,7 +10,7 @@ flex-direction: column;
 
 .content {
   flex: 1 0 auto;
-}
+} */
 
 #projectsPage{
   flex-wrap: wrap;
@@ -54,11 +54,6 @@ nav {
   margin:15px
 }
 
-/* #bioPage,#technologiesPage{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
  .fullPage{
   display: flex;
