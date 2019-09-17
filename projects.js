@@ -32,15 +32,13 @@ let projects = [
     githubUrl: "https://github.com/nss-evening-cohort-8/js-part-deux"
   }];
 
-
-
   const printToDom = (stringToPrint,divId) => {
     const selectedDiv = document.getElementById(divId);
     selectedDiv.innerHTML = stringToPrint;
   }
 
     const printBio = () => {
-      bioString = `<h1> NO CONTENT YET BIO</h1>`;
+      bioString = `<img src="images/me.png" class="bio" width='300px'alt="">`;
     printToDom(bioString,'bioPage');
     };
     printBio();
@@ -70,10 +68,7 @@ let projects = [
   printToDom(doneString,'projectsPage');
   });
 };
-
-
-
-const linkEvents = (e) => {
+ const linkEvents = (e) => {
   e.preventDefault();
   const linkClicked = e.target.id;
   if(linkClicked === 'navToBio'){
@@ -93,6 +88,8 @@ const linkEvents = (e) => {
     createProjectCards();
   }
 } 
+
+
 
 const myLinks = document.getElementById('navLinks');
 myLinks.addEventListener('click',linkEvents);

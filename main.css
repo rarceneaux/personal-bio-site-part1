@@ -1,16 +1,3 @@
-/* html, body {
-  height: 100%;
-}
-
-body{
-flex: 1;  
-display: flex;
-flex-direction: column;
-}
-
-.content {
-  flex: 1 0 auto;
-} */
 
 #projectsPage{
   flex-wrap: wrap;
@@ -55,12 +42,16 @@ nav {
 }
 
 
- .fullPage{
+ /* .fullPage{
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .hidden{
   display: none;
+}
+
+.bio{
+  margin: 25px;
 }
