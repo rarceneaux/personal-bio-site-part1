@@ -1,29 +1,50 @@
+html, body {
+  height: 100%;
+}
 
-#projectsPage{
+body{
+flex: 1;  
+display: flex;
+flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+} 
+
+footer{
+  flex-shrink: 0;
+  text-align: center;
+  color:white;
+  width: 100%;
+  background-color: black;
+}
+
+.fab{
+  margin:10px;
+}
+
+
+
+/* #projectsPage{
   flex-wrap: wrap;
-  }
+  } */
 
   .project-card{
     margin:25px;
-    border: solid black;   
+    border: 1px solid black;  
   }
 
   .card-title{
     font-weight: bold
   }
   
-.page-footer{
-  flex-shrink: 0;
-  text-align: center;
-  color:black;
-  width: 100%
-}
-
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: dodgerblue;
 }
 
 #navLinks a {
@@ -34,7 +55,7 @@ nav {
 .rlinks{
   display: flex;
   flex-direction: column;
-  text-align: center;
+  /* text-align: center; */
 }
 
 #myName{
@@ -54,4 +75,11 @@ nav {
 
 .bio{
   margin: 25px;
+}
+
+#projectsPage{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }

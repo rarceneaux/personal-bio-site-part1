@@ -23,14 +23,24 @@ let projects = [
     githubUrl: "https://rarceneaux.github.io/pet-adoption/"
   },
   {
-    title: "Cool Project", 
-    screenshot: "http://gotoflashgames.com/files/file/033.jpg", 
-    description: "This is the best project", // A good project description includes 'the what', 'the why', and 'the how'.
-    technologiesUsed: "HTML, CSS, Vanilla JavaScript, Version Control with Github",
-    available: false,
-    url: "https://github.com/nss-evening-cohort-8/js-part-deux", // Towards the latter part of the class, you will learn how to host your projects and people will be able to view them live. Cool, right? Welp, until then, just use your GitHub link in this spot as well.
-    githubUrl: "https://github.com/nss-evening-cohort-8/js-part-deux"
-  }];
+    title: "Sorting Hat", 
+    screenshot: "images/Sorting-Hat.png", 
+    description: "This project include event listeners", // A good project description includes 'the what', 'the why', and 'the how'.
+    technologiesUsed: "HTML, CSS, JavaScript, Bootstrap 4 Version Control with Github",
+    available: true,
+    url: "https://github.com/rarceneaux/Sorting-Hat-e10", // Towards the latter part of the class, you will learn how to host your projects and people will be able to view them live. Cool, right? Welp, until then, just use your GitHub link in this spot as well.
+    githubUrl: "https://github.com/rarceneaux/Sorting-Hat-e10/"
+  },
+  {
+    title: "Temperature Converter",
+    screenshot: "images/temp-converter.png",
+    description: "Coming Soon",
+    technologiesUsed:"HTML, CSS, JavaScript, Bootstrap 4 Version Control with Github",
+    available: true,
+    url:"https://github.com/rarceneaux/temperature-converter",
+    githubUrl:"https://github.com/rarceneaux/temperature-converter"
+  }
+];
 
   const printToDom = (stringToPrint,divId) => {
     const selectedDiv = document.getElementById(divId);
@@ -39,6 +49,7 @@ let projects = [
 
     const printBio = () => {
       bioString = `<img src="images/me.png" class="bio" width='300px'alt="">`;
+      bioString += `<p>Born and raised in Nashville, TN where I was raised in a single-family household until the age of 9. </p>`;
     printToDom(bioString,'bioPage');
     };
     printBio();
