@@ -6,6 +6,7 @@ body{
 flex: 1;  
 display: flex;
 flex-direction: column;
+background-color: lightgrey;
 }
 
 .content {
@@ -24,20 +25,13 @@ footer{
   margin:10px;
 }
 
+.card{
+  margin:25px;
+}
 
-
-/* #projectsPage{
-  flex-wrap: wrap;
-  } */
-
-  .project-card{
-    margin:25px;
-    border: 1px solid black;  
-  }
-
-  .card-title{
-    font-weight: bold
-  }
+.card-title{
+  font-weight: bold
+}
   
 
 nav {
@@ -50,6 +44,7 @@ nav {
 #navLinks a {
   margin: 1em;
   color:black;
+
 }
 
 .rlinks{
@@ -59,27 +54,25 @@ nav {
 }
 
 #myName{
-  margin:15px
+  margin:15px;
 }
 
-
- /* .fullPage{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-.hidden{
-  display: none;
-}
 
 .bio{
   margin: 25px;
 }
 
 #projectsPage{
-  display: flex;
+  /* display: flex; */
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
+}
+
+.flex-fix{
+  display: flex;
+}
+
+.hidden{
+  display: none;
 }

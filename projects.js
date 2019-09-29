@@ -2,7 +2,6 @@ const bio = document.getElementById('bioPage');
 const tech = document.getElementById('technologiesPage');
 const pro = document.getElementById('projectsPage');
 
-
 let projects = [
   {
     title: "Product Cards", 
@@ -10,7 +9,7 @@ let projects = [
     description: "This project is a simple example of a static website containing product cards hard coded to display on the page using Flexbox", // A good project description includes 'the what', 'the why', and 'the how'.
     technologiesUsed: "HTML, CSS, Flexbox, Version Control with Github",
     available: true,
-    url: "https://rarceneaux.github.io/product-cards/", // Towards the latter part of the class, you will learn how to host your projects and people will be able to view them live. Cool, right? Welp, until then, just use your GitHub link in this spot as well.
+    url: "https://rarceneaux.github.io/product-cards/", // Towards the latter part ofhttps://rarceneaux.github.io/product-cards/ the class, you will learn how to host your projects and people will be able to view them live. Cool, right? Welp, until then, just use your GitHub link in this spot as well.
     githubUrl: "https://rarceneaux.github.io/product-cards/"
   },
   {
@@ -28,17 +27,26 @@ let projects = [
     description: "This project include event listeners", // A good project description includes 'the what', 'the why', and 'the how'.
     technologiesUsed: "HTML, CSS, JavaScript, Bootstrap 4 Version Control with Github",
     available: true,
-    url: "https://github.com/rarceneaux/Sorting-Hat-e10", // Towards the latter part of the class, you will learn how to host your projects and people will be able to view them live. Cool, right? Welp, until then, just use your GitHub link in this spot as well.
-    githubUrl: "https://github.com/rarceneaux/Sorting-Hat-e10/"
+    url: "https://rarceneaux.github.io/Sorting-Hat-e10/", // Towards the latter part of the class, you will learn how to host your projects and people will be able to view them live. Cool, right? Welp, until then, just use your GitHub link in this spot as well.
+    githubUrl: " https://rarceneaux.github.io/Sorting-Hat-e10/"
   },
   {
     title: "Temperature Converter",
     screenshot: "images/temp-converter.png",
-    description: "Coming Soon",
+    description: "Celsius/Fahrenheit Simple Converter",
     technologiesUsed:"HTML, CSS, JavaScript, Bootstrap 4 Version Control with Github",
     available: true,
-    url:"https://github.com/rarceneaux/temperature-converter",
-    githubUrl:"https://github.com/rarceneaux/temperature-converter"
+    url:"https://rarceneaux.github.io/temperature-converter/",
+    githubUrl:"https://rarceneaux.github.io/temperature-converter/"
+  },
+  {
+  title: "Sandwich Maker",
+    screenshot: "images/sandwich.png",
+    description: "Simple sandwich maker to display the selection of the user, review, and complete order",
+    technologiesUsed:"HTML, CSS, JavaScript, Bootstrap 4 Version Control with Github",
+    available: true,
+    url:"https://rarceneaux.github.io/sandwich-maker/",
+    githubUrl:"https://rarceneaux.github.io/sandwich-maker/"
   }
 ];
 
@@ -49,7 +57,7 @@ let projects = [
 
     const printBio = () => {
       bioString = `<img src="images/me.png" class="bio" width='300px'alt="">`;
-      bioString += `<p>Born and raised in Nashville, TN where I was raised in a single-family household until the age of 9. </p>`;
+      bioString += `<p></p>`;
     printToDom(bioString,'bioPage');
     };
     printBio();
@@ -58,47 +66,41 @@ let projects = [
       techString = `<h1> NO CONTENT YET TECH</h1>`;
     printToDom(techString,'technologiesPage');
     };
-    
-// event listener to call createProject cards
+
     const createProjectCards = ()=> {
     doneString = '';  
     DoneProjects = projects.filter(donePro => donePro.available === true);  
     DoneProjects.forEach((project) => {
-    doneString += `<div class="project-card" style="width: 20rem;">`;
-    doneString += `<img src="${project.screenshot}" class="card-img-top" alt="project-cards">`;
-    doneString += `<div class="card-body">`;
-    doneString += `<h5 class="card-title text-center">${project.title}</h5>`;
-    doneString += `<p class="card-text text-center">${project.description}.</p>`;
-    doneString += `<p class="card-text text-center">${project.technologiesUsed}.</p>`;
-    doneString += `<div class='links'>`
-    doneString += `<a class='rlinks' href="">${project.url}</a>`;
-    doneString += `<a class='rlinks' href="">${project.githubUrl}</a>`;
-    doneString += `</div>`
-    doneString += `</div>`;
-    doneString += `</div>`;   
+    doneString += `<div class="card" style="width: 25rem;">
+    <img src="${project.screenshot}" class="card-img-top" alt="...">
+    <div class="card-body text-center">
+      <h5 class="card-title">${project.title}</h5>
+      <p class="card-text">${project.description}</p>
+      <a class="card-text" href="${project.url}">${project.url}</a>
+      <a class="card-text" href="${project.githubUrl}">${project.githubUrl}</a>
+    </div>
+  </div>`; 
   printToDom(doneString,'projectsPage');
   });
 };
+
+
  const linkEvents = (e) => {
   e.preventDefault();
+  bio.classList.add('hidden');
+  tech.classList.add('hidden');
+  pro.classList.add('hidden');
   const linkClicked = e.target.id;
   if(linkClicked === 'navToBio'){
     bio.classList.remove('hidden');
-    tech.classList.add('hidden');
-    pro.classList.add('hidden');
   } else if (linkClicked === 'navToTechnologies') {
-    bio.classList.add('hidden');
-    pro.classList.add('hidden');
     tech.classList.remove('hidden');
     printTech();
-  } else {
-    (linkClicked === 'navToProjects');
-    tech.classList.add('hidden');
-    bio.classList.add('hidden');
+  } else  if (linkClicked === 'navToProjects'){      
     pro.classList.remove('hidden');
     createProjectCards();
   }
-} 
+}; 
 
 
 
