@@ -4,7 +4,7 @@
  This application is to showcase my journey at NSS. It includes a Bio Page, Technoloy Used Page, and Projects Page.
  
 ## Screenshot
-![](screenshots/projects.png)
+![](https://raw.githubusercontent.com/rarceneaux/personal-bio-site-e10/master/screenshots/projects.png)
  
  
 ## How to Run:

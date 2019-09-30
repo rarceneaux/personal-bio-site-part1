@@ -24,7 +24,7 @@ let projects = [
   {
     title: "Sorting Hat", 
     screenshot: "images/Sorting-Hat.png", 
-    description: "This project include event listeners", // A good project description includes 'the what', 'the why', and 'the how'.
+    description: "This project is a example of adding an student to one of the four houses at Hogwarts. ", // A good project description includes 'the what', 'the why', and 'the how'.
     technologiesUsed: "HTML, CSS, JavaScript, Bootstrap 4 Version Control with Github",
     available: true,
     url: "https://rarceneaux.github.io/Sorting-Hat-e10/", // Towards the latter part of the class, you will learn how to host your projects and people will be able to view them live. Cool, right? Welp, until then, just use your GitHub link in this spot as well.
@@ -33,7 +33,7 @@ let projects = [
   {
     title: "Temperature Converter",
     screenshot: "images/temp-converter.png",
-    description: "Celsius/Fahrenheit Simple Converter",
+    description: "This project is a simple Celsius/Fahrenheit Converter.",
     technologiesUsed:"HTML, CSS, JavaScript, Bootstrap 4 Version Control with Github",
     available: true,
     url:"https://rarceneaux.github.io/temperature-converter/",
@@ -42,7 +42,7 @@ let projects = [
   {
   title: "Sandwich Maker",
     screenshot: "images/sandwich.png",
-    description: "Simple sandwich maker to display the selection of the user, review, and complete order",
+    description: "The sandwich maker project displays the selection of the user, the ability to review, and complete order their order.",
     technologiesUsed:"HTML, CSS, JavaScript, Bootstrap 4 Version Control with Github",
     available: true,
     url:"https://rarceneaux.github.io/sandwich-maker/",
@@ -63,7 +63,7 @@ let projects = [
     printBio();
 
     const printTech = () => {
-      techString = `<h1> NO CONTENT YET TECH</h1>`;
+      techString = `<a href="https://getbootstrap.com"><i class="fab fa-bootstrap fa-3x"></i></a>`;
     printToDom(techString,'technologiesPage');
     };
 
@@ -101,7 +101,6 @@ let projects = [
     createProjectCards();
   }
 }; 
-
 
 
 const myLinks = document.getElementById('navLinks');
