@@ -36,14 +36,13 @@ footer{
 
 nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: dodgerblue;
+  justify-content: center;
+  
 }
 
 #navLinks a {
-  margin: 1em;
   color:black;
+  justify-content: space-between
 
 }
 
@@ -54,7 +53,7 @@ nav {
 }
 
 #myName{
-  margin:15px;
+  background-color: dodgerblue;
 }
 
 
@@ -75,4 +74,8 @@ nav {
 
 .hidden{
   display: none;
+}
+
+#top{
+    background-color: black;
 }
