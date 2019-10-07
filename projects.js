@@ -47,7 +47,16 @@ let projects = [
     available: true,
     url:"https://rarceneaux.github.io/sandwich-maker/",
     githubUrl:"https://rarceneaux.github.io/sandwich-maker/"
-  }
+  },
+  {
+  title: "Tamagotchi",
+  screenshot: "images/Tamagotchi.png",
+  description: "This application is a less realistic remake of the mid-ninties fad Tamagotchi.",
+  technologiesUsed:"HTML, CSS, JavaScript",
+  available: true,
+  url:"https://rarceneaux.github.io/Tamagotchi/",
+  githubUrl:"https://rarceneaux.github.io/Tamagotchi/"
+  },
 ];
 
   const printToDom = (stringToPrint,divId) => {
@@ -63,7 +72,7 @@ let projects = [
     printBio();
 
     const printTech = () => {
-      techString = `<a href="https://getbootstrap.com"><i class="fab fa-bootstrap fa-3x"></i></a>`;
+      techString = `<p></p>`;
     printToDom(techString,'technologiesPage');
     };
 
