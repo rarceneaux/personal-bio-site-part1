@@ -18,7 +18,6 @@ const createProjectCards = () => {
         </div>
       </div>`;
       });
-      // console.log(domString);
       utils.printToDom('projectsPage', domString);
     });
 };
