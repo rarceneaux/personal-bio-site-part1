@@ -1,0 +1,108 @@
+@import "~bootstrap/scss/bootstrap";
+
+html, body {
+  height: 100%;
+}
+
+/* body{
+flex: 1;  
+display: flex;
+flex-direction: column;
+background-color: lightgrey;
+} */
+
+body{
+  background-color: lightgray;
+}
+
+.content {
+  flex: 1 0 auto;
+} 
+
+footer{
+flex-shrink: 0;
+text-align: center;
+color:black;
+width: 100%;
+} 
+
+.fab{
+  margin:10px;
+}
+
+.card{
+  margin:25px;
+  background-color: lightgray;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
+  transition: 0.4s;
+  background: #fff;
+}
+
+.card-title{
+  font-weight: bold
+}
+  
+
+nav {
+  display: flex;
+  justify-content: center;
+  
+}
+
+#navLinks a {
+  color:black;
+  justify-content: space-between;
+  text-align: center;
+  margin: 25px;
+}
+
+.rlinks{
+  display: flex;
+  flex-direction: column;
+  /* text-align: center; */
+}
+/* 
+#myName{
+  background-color: dodgerblue;
+} */
+
+.bio{
+  margin: 25px;
+}
+
+#projectsPage{
+  /* display: flex; */
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.flex-fix{
+  display: flex;
+}
+
+.hidden{
+  display: none;
+}
+
+/* #top{
+    background-color: black;
+} */
+
+#bioPage{
+  text-align: center;
+  margin: 25px;
+}
+
+#technologiesPage{
+  text-align: center;
+}
+
+// Nav bar but not all of it 
+// .container{
+//   background-color: lightgray;
+// }
+
+img{
+  height: 300px;
+}

@@ -1,0 +1,102 @@
+{
+  "project1": {
+    "title": "Product Cards",
+    "screenshot": "https://reactnativestarter-hosting-mobilehub-132039435.s3.amazonaws.com/ProductCards.png",
+    "description": "This project is a simple example of a static website containing product cards hard coded to display on the page using Flexbox",
+    "technologiesUsed": "HTML, CSS, Flexbox, Version Control with Github",
+    "avaiable": true,
+    "url": "https://rarceneaux.github.io/product-cards/",
+    "githubUrl": "https://github.com/rarceneaux/product-cards",
+    "id": "project1"
+  },
+  "project2": {
+    "title": "Pet Adoption",
+    "screenshot": "https://reactnativestarter-hosting-mobilehub-132039435.s3.amazonaws.com/Pets.png",
+    "description": "This project is a simple example of event listeners on the pet buttons. The functionality of this project is the ability to filter the pets array down to the selected pet on the click event.",
+    "technologiesUsed": "HTML, CSS, Flexbox, Version Control with Github",
+    "avaiable": true,
+    "url": "https://rarceneaux.github.io/pet-adoption/",
+    "githubUrl": "https://github.com/rarceneaux/pet-adoption",
+    "id": "project2"
+  },
+  "project3": {    
+    "title": "Sorting Hat",
+    "screenshot": "https://reactnativestarter-hosting-mobilehub-132039435.s3.amazonaws.com/Sorting+Hat.png",
+    "description": "This project is a example of adding an student to one of the four houses at Hogwarts. ",
+    "technologiesUsed": "HTML, CSS, Flexbox, Version Control with Github",
+    "avaiable": true,
+    "url": "https://rarceneaux.github.io/Sorting-Hat-e10/",
+    "githubUrl": "https://github.com/rarceneaux/Sorting-Hat-e10",
+    "id": "project3"
+  },
+  "project4": {
+    "title": "Temperature Converter",
+    "screenshot": "https://reactnativestarter-hosting-mobilehub-132039435.s3.amazonaws.com/Temp+Converter.png",
+    "description": "This project is a simple Celsius/Fahrenheit Converter.",
+    "technologiesUsed": "HTML, CSS, JavaScript, Bootstrap 4 Version Control with Github",
+    "avaiable": true,
+    "url": "https://rarceneaux.github.io/temperature-converter/",
+    "githubUrl": "https://github.com/rarceneaux/temperature-converter",
+    "id": "project4"
+  },
+  "project5": {
+    "title": "Sandwich Maker",
+    "screenshot": "https://reactnativestarter-hosting-mobilehub-132039435.s3.amazonaws.com/Sandwich.png",
+    "description": "The sandwich maker project displays the selection of the user, the ability to review, and complete order their order.",
+    "technologiesUsed": "HTML, CSS, JavaScript, Bootstrap 4 Version Control with Github",
+    "avaiable": true,
+    "url": "https://rarceneaux.github.io/sandwich-maker/",
+    "githubUrl": "https://github.com/rarceneaux/sandwich-maker",
+    "id": "project5"
+  },
+  "project6": {
+    "title": "Tamagotchi",
+    "screenshot": "https://reactnativestarter-hosting-mobilehub-132039435.s3.amazonaws.com/Tamg.png",
+    "description": "This application is a less realistic remake of the mid-ninties fad Tamagotchi.",
+    "technologiesUsed": "HTML, CSS, JavaScript",
+    "avaiable": true,
+    "url": "https://rarceneaux.github.io/Tamagotchi/",
+    "githubUrl": "https://github.com/rarceneaux/Tamagotchi",
+    "id": "project6"
+  },
+  "project7": {
+    "title": "Solar System",
+    "screenshot": "https://reactnativestarter-hosting-mobilehub-132039435.s3.amazonaws.com/Solar+System.png",
+    "description": "This application is small educational platform",
+    "technologiesUsed": "HTML, CSS, JavaScript, Jquery, Boostrap 4, Webpack",
+    "avaiable": true,
+    "url": "https://solar-system-fa95a.firebaseapp.com",
+    "githubUrl": "https://github.com/rarceneaux/solar-system",
+    "id": "project7"
+  },
+  "project8": {
+    "title": "Pinterest",
+    "screenshot": "https://reactnativestarter-hosting-mobilehub-132039435.s3.amazonaws.com/Pinterest.png",
+    "description": "Not so much Pinterest but it's a try ",
+    "technologiesUsed": "HTML, CSS, JavaScript, Jquery, Boostrap 4, Webpack, Firebase",
+    "avaiable": true,
+    "url": "https://rarceneaux.github.io/Pinterest/",
+    "githubUrl": "https://github.com/rarceneaux/Pinterest",
+    "id": "project8"
+  },
+  "project9": {
+    "title": "PanAM",
+    "screenshot": "https://reactnativestarter-hosting-mobilehub-132039435.s3.amazonaws.com/PanAm.png",
+    "description": "Airport Firm Centralized Operational System",
+    "technologiesUsed": "HTML, CSS, JavaScript, Jquery, Boostrap 4, Webpack, Firebase",
+    "avaiable": true,
+    "url": "https://nutshell-panam.firebaseapp.com/",
+    "githubUrl": "https://github.com/nss-evening-cohort-10/nutshell-panam-airlines",
+    "id": "project9"
+  },
+  "project10": {
+    "title": "Star Destroyer",
+    "screenshot": "https://reactnativestarter-hosting-mobilehub-132039435.s3.amazonaws.com/Star-Destroyer.png",
+    "description": "The Saga ends here Luke Skywalker Public Enemy #1",
+    "technologiesUsed": "HTML, CSS, JavaScript, Jquery, Boostrap 4, Webpack, Firebase",
+    "avaiable": true,
+    "url": "https://nutshell-star-destroyer.firebaseapp.com/",
+    "githubUrl": "https://github.com/nss-evening-cohort-10/nutshell-star-destroyer",
+    "id": "project"
+}
+}
